@@ -1,8 +1,8 @@
 
   
-  #Title Weather
+  #Title weather
 
-  ##Table of Contents
+  ## Table of Contents
   *[Description](#description)
   *[Installation](#installation)
   *[Usage](#usage)
@@ -12,30 +12,37 @@
   *[Questions](#questions)
 
   <a name='description'></a>
-  ##Description 
-  Tells you the weather
+
+  ## Description 
+  it is a homework
 
   <a name='installation'></a>
-  ##Installation
+
+  ## Installation
   node
 
   <a name='usage'></a>
-  ##Usage
-  homework
+
+  ## Usage
+  homework stuff
 
   <a name='license'></a>
-  ##License
+
+  ## License
   
 
   <a name='contributors'></a>
-  ##Contributors
-  everyone
+
+  ## Contributors
+  me
 
   <a name='tests'></a>
-  ##Tests
+
+  ## Tests
   none
 
   <a name='questions'></a>
-  ##Questions
+
+  ## Questions
   nope
 

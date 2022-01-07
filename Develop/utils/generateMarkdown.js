@@ -1,18 +1,30 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if ((license ==="")) {
-    return `Badge lins`
-  } else if ((license === "")) {
-    return `badge link`
+  if ((license === "Apache")) {
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`
+  } else if ((license === "Boost")) {
+    return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]`
+  } else if ((license === "BSD")) {
+    return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]`
   } else {
-    return
+    return "";
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if ((license === "Apache")) {
+    return `(https://opensource.org/licenses/Apache-2.0)`
+  } else if ((license === "Boost")) {
+    return `(https://www.boost.org/LICENSE_1_0.txt)`
+  } else if ((license === "BSD")) {
+    return `(https://opensource.org/licenses/BSD-3-Clause)`  
+  } else {
+    return "";
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -25,7 +37,7 @@ function generateMarkdown(data) {
   
   #Title ${data.title}
 
-  ##Table of Contents
+  ## Table of Contents
   *[Description](#description)
   *[Installation](#installation)
   *[Usage](#usage)
@@ -35,33 +47,41 @@ function generateMarkdown(data) {
   *[Questions](#questions)
 
   <a name='description'></a>
-  ##Description 
+
+  ## Description 
   ${data.description}
 
   <a name='installation'></a>
-  ##Installation
+
+  ## Installation
   ${data.installation}
 
   <a name='usage'></a>
-  ##Usage
+
+  ## Usage
   ${data.usage}
 
   <a name='license'></a>
-  ##License
+
+  ## License
   ${data.license}
 
   <a name='contributors'></a>
-  ##Contributors
+
+  ## Contributors
   ${data.contributors}
 
   <a name='tests'></a>
-  ##Tests
+
+  ## Tests
   ${data.tests}
 
   <a name='questions'></a>
-  ##Questions
-  ${data.questions}
+
+  ## Questions
   
+  Email: Chr1sti4n0@github.com
+  GitHub: Chr1sti4n0
 
 `;
 }

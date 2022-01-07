@@ -17,10 +17,9 @@ inquirer
         name: 'description',
     },
     {
-        type: 'choices',
+        type: 'input',
         message: 'What did you install?',
         name: 'installation',
-        choices: ['', '', ''],
     },
     {
         type: 'input',
@@ -31,7 +30,7 @@ inquirer
         type: 'list',
         message: 'Select a License',
         name: 'license',
-        choices: ['', '', ''],
+        choices: ['Apache', 'Boost', 'BSD'],
     }, 
     {
         type: 'input',
