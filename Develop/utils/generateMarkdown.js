@@ -1,9 +1,9 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if ((license ==="MIT")) {
+  if ((license ==="")) {
     return `Badge lins`
-  } else if ((license === "Mozilla")) {
+  } else if ((license === "")) {
     return `badge link`
   } else {
     return
@@ -23,17 +23,45 @@ function generateMarkdown(data) {
   
   return `
   
-  # ${data.title}
+  #Title ${data.title}
 
   ##Table of Contents
-  *<a href="">Title</a>
-  *<a href="">Description</a>
-  *<a href="">Installation</a>
-  *<a href="">Usage</a>
-  *<a href="">License</a>
-  *<a href="">Contributors</a>
-  *<a href="">Tests</a>
-  *<a href="">Questions</a>
+  *[Description](#description)
+  *[Installation](#installation)
+  *[Usage](#usage)
+  *[License](#license)
+  *[Contributors](#contributors)
+  *[Tests](#tests)
+  *[Questions](#questions)
+
+  <a name='description'></a>
+  ##Description 
+  ${data.description}
+
+  <a name='installation'></a>
+  ##Installation
+  ${data.installation}
+
+  <a name='usage'></a>
+  ##Usage
+  ${data.usage}
+
+  <a name='license'></a>
+  ##License
+  ${data.license}
+
+  <a name='contributors'></a>
+  ##Contributors
+  ${data.contributors}
+
+  <a name='tests'></a>
+  ##Tests
+  ${data.tests}
+
+  <a name='questions'></a>
+  ##Questions
+  ${data.questions}
+  
 
 `;
 }
