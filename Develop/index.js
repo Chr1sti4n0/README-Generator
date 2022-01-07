@@ -13,7 +13,7 @@ inquirer
     },
     {
         type: 'input',
-        message: 'Provide a description of your project',
+        message: 'Provide a description of your project: ',
         name: 'description',
     },
     {
@@ -44,8 +44,13 @@ inquirer
     }, 
     {
         type: 'input',
-        message: 'Questions?',
-        name: 'questions',
+        message: 'What is your Email?',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'GitHub',
     },
    ])
    .then((data) => {

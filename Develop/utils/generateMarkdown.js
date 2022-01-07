@@ -2,11 +2,11 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if ((license === "Apache")) {
-    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`
+    return `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
   } else if ((license === "Boost")) {
-    return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]`
+    return `![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`
   } else if ((license === "BSD")) {
-    return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]`
+    return `![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)`
   } else {
     return "";
   }
@@ -16,11 +16,11 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if ((license === "Apache")) {
-    return `(https://opensource.org/licenses/Apache-2.0)`
+    return `https://opensource.org/licenses/Apache-2.0`
   } else if ((license === "Boost")) {
-    return `(https://www.boost.org/LICENSE_1_0.txt)`
+    return `https://www.boost.org/LICENSE_1_0.txt`
   } else if ((license === "BSD")) {
-    return `(https://opensource.org/licenses/BSD-3-Clause)`  
+    return `https://opensource.org/licenses/BSD-3-Clause`  
   } else {
     return "";
   }
@@ -32,10 +32,13 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+
+  const badge = renderLicenseBadge(data.license);
+  const link = renderLicenseLink(data.license);
   
   return `
   
-  #Title ${data.title}
+  #  ${data.title}
 
   ## Table of Contents
   *[Description](#description)
@@ -64,7 +67,8 @@ function generateMarkdown(data) {
   <a name='license'></a>
 
   ## License
-  ${data.license}
+  ${link}
+  ${badge}
 
   <a name='contributors'></a>
 
@@ -79,9 +83,9 @@ function generateMarkdown(data) {
   <a name='questions'></a>
 
   ## Questions
-  
-  Email: Chr1sti4n0@github.com
-  GitHub: Chr1sti4n0
+
+  Email: ${data.email}\n
+  GitHub Name: ${data.GitHub}
 
 `;
 }
